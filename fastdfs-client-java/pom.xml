@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.csource</groupId>
+  <artifactId>fastdfs-client-java</artifactId>
+  <version>1.27-SNAPSHOT.jhhbeta</version>
+  <name>fastdfs-client-java</name>
+  <description>fastdfs client for java</description>
+  <packaging>jar</packaging>
+
+<distributionManagement>
+    <repository>
+        <id>releases</id>
+        <name>Internal Releases</name>
+        <url>http://192.168.1.31:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>Internal Snapshots</name>
+        <url>http://192.168.1.31:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+</distributionManagement>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <maven.test.skip>true</maven.test.skip>
+    <jdk.version>1.6</jdk.version>
+  </properties>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.googlecode.xmemcached/xmemcached -->
+		<dependency>
+		    <groupId>com.googlecode.xmemcached</groupId>
+		    <artifactId>xmemcached</artifactId>
+		    <version>2.4.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.6</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+	</dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
